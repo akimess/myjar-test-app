@@ -118,9 +118,9 @@ Response:
 ```
 
 ## Frontend
-**Language:** JavaScript
-**Library**: React
-**React Tools**: Material-UI (https://material-ui-next.com/)
+**Language:** JavaScript.
+**Library**: React.
+**React Tools**: Material-UI (https://material-ui-next.com/).
 
 **Why React?**
 React was chosen so I could create a beatiful design with understandable code in a short period of time. I like the design of Google's Material UI, so I choosen the tool specified above to create an intuitive and beautiful design.
