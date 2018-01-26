@@ -1,0 +1,5 @@
+{
+    "PORT": 4000,
+    "MONGODB_URI": "mongodb://myjar:myjarTest@ds135384.mlab.com:35384/myjar-test-app",
+    "PASS": "X@gKLY_pc8Q*U-SfzGg!6*f2SGJ!H-&+"
+}

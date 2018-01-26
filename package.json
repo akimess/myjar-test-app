@@ -1,0 +1,28 @@
+{
+  "name": "myjar-test-app",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2",
+    "google-libphonenumber": "^3.0.10",
+    "material-ui": "^1.0.0-beta.30",
+    "material-ui-icons": "^1.0.0-beta.17",
+    "mongoose": "^5.0.1",
+    "nodemon": "^1.14.11",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "react-scripts": "1.1.0"
+  },
+  "scripts": {
+    "start": "concurrently \"npm run server\" \"npm run client\"",
+    "server": "nodemon --use_strict index.js",
+    "client": "react-scripts start",
+    "build": "react-scripts build",
+    "eject": "react-scripts eject"
+  },
+  "devDependencies": {
+    "concurrently": "^3.5.1"
+  },
+  "proxy": "http://localhost:4000/"
+}

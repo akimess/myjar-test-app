@@ -1,0 +1,32 @@
+.Dashboard {
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50px;
+}
+
+.dashboard-top{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.add-icon{
+  margin-right: 10px;
+}
+
+.appbar-text{
+  flex: 1;
+}
+
+.search-field{
+  background-color: #757de8;
+  display: flex !important;
+  align-items: center !important;
+  border-radius: 25px;
+}
+
+.search-field:after, .search-field:before{
+  content: none !important;
+}

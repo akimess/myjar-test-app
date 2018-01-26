@@ -1,0 +1,21 @@
+.container{
+    display: flex;
+}
+
+.container > div > div{
+    margin-bottom: 20px;
+}
+
+.left{
+    margin-right: 40px;
+}
+
+.top{
+    display: flex;
+    justify-content: space-between;
+}
+
+.err-message{
+    color:red !important;
+    margin-bottom: 5px !important;
+}

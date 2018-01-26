@@ -1,0 +1,28 @@
+.dialog {
+    margin: 0 auto;
+    height: 40%;
+    width:30%;
+    margin-top: 10%;
+    border: 1px solid #e5e5e5;
+    background-color: #fff;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, .5);
+    /* padding: 32px; */
+  }
+
+.info{
+  min-width: 250px;
+  display: flex;
+  flex-direction: column;
+}
+
+.info-field{
+  margin-bottom: 20px !important;
+}
+
+.info-field > div > input {
+  color: black !important;
+}
+
+.info-label{
+  font-size: large !important;
+}
