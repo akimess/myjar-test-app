@@ -5,17 +5,23 @@
 The last command will automatically open the browser with the needed address (localhost:3000).
 
 ## Backend
-**Language:** NodeJS.
+
+**Language:** NodeJS. 
+
 **Framework:** Express.
+
 **Database:** MongoDB.
 
 **Why Express?**
+
 I choose Express so I could build a more readable code with routing and understandable file structure. Express speed up the process of writing the backend significantly by removing the need to write repetitive code.
 
 **Why MongoDB?**
+
 In the specification it said that the payload will have 10 fields, in which only two fields are specified, the rest can have different names. With that in mind, it is easier and more logical to store them as documents, which MongoDB is used for. Mongoose MongoDB library for NodeJS allowed to write a database connection that could automatically perform tasks before creating and extracting documents, for example encrypt and decrypt phone number.
 
 **Phone number validation and Encryption/Decryption**
+
 I used “google-libphonenumber” library for phone number validation. It allowed me to not only to validate if the phone number is valid for Great Britain, but also parse it to a correct format.
 
 For encryption/decryption I used built-in NodeJS module “crypto”, algorithm “aes-256-gcm”. AES 256 can only be broken by brute-force ( or if the passphrase is easily accessible ). How fast it can be broken depends on the passphrase strength. GCM mode is best suited if you want confidentiality and integrity. Because the specification stated that the phone number should be stored in a secure encrypted way that meant confidentiality, but we need to also show the last 4 number of the phone number in our “GET” requests, which meant we needed integrity.
@@ -38,8 +44,9 @@ For encryption/decryption I used built-in NodeJS module “crypto”, algorithm 
 ## API
 **Routes**
 `GET /clients` - will return all clients that are stored currently in the database.
+
 Response:
-```json
+```javascript
 {
     "success": Boolean,
     "data": {
@@ -50,8 +57,9 @@ Response:
 ```
 
 `GET /clients?search={value}` - filter specific client emails by keyword.
+
 Response (**NB!** Response varies depending on what field names you provided):
-```json
+```javascript
 {
     "success": Boolean,
     "data": {
@@ -61,8 +69,9 @@ Response (**NB!** Response varies depending on what field names you provided):
 }
 ```
 `GET /clients/:id` - will return specified client full information.
+
 Response:
-```json
+```javascript
 {
     "success": Boolean,
     "data": {
@@ -81,8 +90,9 @@ Response:
 ```
 
 `POST /clients` - will upload new client to the database.
+
 Body example:
-```json
+```javascript
 {
     "email": String,
     "phone": String,
@@ -97,16 +107,19 @@ Body example:
 }
 ```
 There should be 10 fields in total. Email and Phone fields are required, all other fields can be renamed. **NB!** Email and Phone are validated.
+
 Response:
+
 *If successful*
-```json
+```javascript
 {
     "success": true,
     "message": String
 }
 ```
+
 *If unsuccessful*
-```json
+```javascript
 {
     "success": false,
     "message": String,
@@ -118,11 +131,15 @@ Response:
 ```
 
 ## Frontend
+
 **Language:** JavaScript.
+
 **Library**: React.
+
 **React Tools**: Material-UI (https://material-ui-next.com/).
 
 **Why React?**
+
 React was chosen so I could create a beatiful design with understandable code in a short period of time. I like the design of Google's Material UI, so I choosen the tool specified above to create an intuitive and beautiful design.
 
 **Structure**
